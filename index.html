@@ -29,31 +29,40 @@
   <body>
     <header>
       <nav class="intestazione">
-        <img src="./images/logo.svg" alt="logo_image" class="logo_image" />
+        <div>
+          <img src="./images/logo.svg" alt="logo_image" class="logo_image" />
+        </div>
         <button class="logo__button">Try It Free</button>
       </nav>
 
       <section class="hero">
-        <h1>Build The Community <br />Your Fans Will Love</h1>
-        <p class="hero__p">
-          Huddle re-imagines the way we build communities. You have a voice, but
-          so does your audience. Create connections with your users as you
-          engage in genuine discussion.
-        </p>
-        <button class="hero__button">Get Started For Free</button>
-        <img
-          src="./images/illustration-mockups.svg"
-          alt="immagine che rappresenta l'anteprima visiva di un sito desktop e responsive"
-        />
+        <div class="hero_call_to_action">
+          <h1>Build The Community <br />Your Fans Will Love</h1>
+          <p class="hero__p">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+
+          <button class="hero__button">Get Started For Free</button>
+        </div>
+        <div class="hero_call_to_action_img">
+          <img
+            src="./images/illustration-mockups.svg"
+            alt="immagine che rappresenta l'anteprima visiva di un sito desktop e responsive"
+          />
+        </div>
       </section>
     </header>
     <main>
       <article class="card">
-        <img
-          src="./images/illustration-grow-together.svg"
-          alt="un'illustrazione di una conversazione tra uomo e donna"
-          class="card__image"
-        />
+        <div>
+          <img
+            src="./images/illustration-grow-together.svg"
+            alt="un'illustrazione di una conversazione tra uomo e donna"
+            class="card__image"
+          />
+        </div>
         <div class="card__content">
           <h2>Grow Together</h2>
           <p>
@@ -65,12 +74,14 @@
       </article>
 
       <article class="card">
-        <img
-          src="./images/illustration-flowing-conversation.svg"
-          alt="un'illustrazione di una conversazione tra amici seduti ad un parco"
-          class="card__image"
-        />
-        <div class="card__content">
+        <div>
+          <img
+            src="./images/illustration-flowing-conversation.svg"
+            alt="un'illustrazione di una conversazione tra amici seduti ad un parco"
+            class="card__image"
+          />
+        </div>
+        <div class="card__content card_content_reverse">
           <h2>Flowing Conversations</h2>
           <p>
             You wouldn't paginate a conversation in real life, so why do it
@@ -81,11 +92,13 @@
       </article>
 
       <article class="card">
-        <img
-          src="./images/illustration-your-users.svg"
-          alt="un'illustrazione di una conversazione tra uomo e donna"
-          class="card__image"
-        />
+        <div>
+          <img
+            src="./images/illustration-your-users.svg"
+            alt="un'illustrazione di una conversazione tra uomo e donna"
+            class="card__image"
+          />
+        </div>
         <div class="card__content">
           <h2>Your Users</h2>
           <p>
@@ -105,49 +118,52 @@
     </main>
 
     <footer>
-      <section class="contatti">
+      <div class="wrapper">
         <img src="./images/image.svg" alt="white logo" class="logo_bianco" />
-        <div class="location">
-          <img src="./images/icon-location.svg" alt="" />
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua</span
-          >
+        <div class="footer_elements">
+          <section class="contatti">
+            <div class="location">
+              <img src="./images/icon-location.svg" alt="" />
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua</span
+              >
+            </div>
+            <div class="phone">
+              <img src="./images/icon-phone.svg" alt="" /><span
+                >+1-543-123-4567</span
+              >
+            </div>
+            <div class="mail">
+              <img src="./images/icon-email.svg" alt="" /><span
+                >example@huddle.com</span
+              >
+            </div>
+          </section>
+          <section class="navigation_footer">
+            <ul>
+              <li>About Us</li>
+              <li>What We Do</li>
+              <li>FAQ</li>
+              <li>Career</li>
+              <li>Blog</li>
+              <li>Contact Us</li>
+            </ul>
+          </section>
+          <section class="social">
+            <div class="cerchio">
+              <i class="fa-brands fa-facebook-f fa-m"></i>
+            </div>
+            <div class="cerchio"><i class="fa-brands fa-twitter fa-m"></i></div>
+            <div class="cerchio">
+              <i class="fa-brands fa-instagram fa-m"></i>
+            </div>
+          </section>
         </div>
-        <div class="phone">
-          <img src="./images/icon-phone.svg" alt="" /><span
-            >+1-543-123-4567</span
-          >
-        </div>
-        <div class="mail">
-          <img src="./images/icon-email.svg" alt="" /><span
-            >example@huddle.com</span
-          >
-        </div>
-      </section>
-
-      <section class="navigation_footer">
-        <ul>
-          <li>About Us</li>
-          <li>What We Do</li>
-          <li>FAQ</li>
-          <li>Career</li>
-          <li>Blog</li>
-          <li>Contact Us</li>
-        </ul>
-      </section>
-
-      <section class="social">
-        <div class="cerchio">
-          <i class="fa-brands fa-facebook-f fa-lg" style="color: #ffffff"></i>
-        </div>
-        <div class="cerchio"><i class="fa-brands fa-twitter fa-lg"></i></div>
-        <div class="cerchio"><i class="fa-brands fa-instagram fa-lg"></i></div>
-      </section>
-
-      <section class="copyright">
-        <span>&copy; Copyright 2018 Huddle. All rights reserved.</span>
-      </section>
+        <section class="copyright">
+          <span>&copy; Copyright 2018 Huddle. All rights reserved.</span>
+        </section>
+      </div>
     </footer>
   </body>
 </html>

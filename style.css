@@ -72,13 +72,13 @@ p {
 }
 
 /*#endregion CSS reset e normalize*/
-
 /*#region HEADER and HERO SECTION*/
 header {
   background-color: var(--ciano);
   padding: 2rem 1.5rem 3rem 1.5rem;
   background-image: url(./images/bg-hero-mobile.svg);
   background-repeat: no-repeat;
+  container-type: inline-size;
 }
 
 .intestazione,
@@ -93,6 +93,7 @@ header {
   padding-inline: 2.5rem;
   margin-top: 8rem; /*da ELIMINARE PER DESKTOP*/
 }
+
 .logo_image {
   max-width: 90px;
   object-fit: contain;
@@ -113,10 +114,14 @@ header {
 h1 {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   line-height: 1.4;
 }
-
+button:hover,
+button:active {
+  opacity: 0.75;
+  cursor: pointer;
+}
 .hero__button {
   background-color: var(--rosa);
   color: var(--ciano);
@@ -137,21 +142,26 @@ h1 {
   width: 100%;
   max-width: 47rem;
   height: auto;
-  padding: 1rem;
 }
 
 /*#endregion HEADER and HERO SECTION*/
+/*#region CARDS*/
 .card {
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 6px 2px rgba(156, 148, 148, 0.19);
   -webkit-box-shadow: 1px 1px 6px 2px rgba(156, 148, 148, 0.19);
   -moz-box-shadow: 1px 1px 6px 2px rgba(156, 148, 148, 0.19);
   border-radius: 15px;
-  padding: 5rem;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 420px;
 }
 
 .card__content {
   margin-top: 5rem;
+  flex-basis: 50%;
 }
 
 .card h2 {
@@ -163,9 +173,15 @@ h1 {
   font-size: 1.6rem;
   color: var(--grigio);
 }
-
+.card img {
+  width: 100%;
+}
 main {
   padding: 5rem 1.5rem 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main > * {
@@ -181,6 +197,14 @@ h3 {
 .call_to_action_button {
   margin: 0;
 }
+
+.hero_call_to_action {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
 .call_to_action {
   position: relative;
   padding: 4rem 1rem;
@@ -188,18 +212,34 @@ h3 {
   margin-bottom: -150px; /* Spinge la card in basso */
   z-index: 50;
   background: white;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+/*#endregion CARDS*/
+/*#region FOOTER*/
 footer {
   background-color: var(--ciano_scuro);
   padding-top: 15rem;
+  font-size: 1.6rem;
 }
 .card:nth-of-type(3) {
   margin-bottom: 10rem;
 }
 .logo_bianco {
-  width: 20rem;
+  width: 18rem;
+  margin-bottom: 2rem;
 }
-
+ul {
+  list-style: none;
+  font-size: 1.8rem;
+}
+ul li {
+  margin-bottom: 1.5rem;
+}
 footer .location img,
 footer .phone img,
 footer .mail img {
@@ -228,7 +268,7 @@ footer span {
   color: var(--ciano);
   text-align: initial;
 }
-footer > * {
+.footer_elements > * {
   margin-bottom: 7rem;
 }
 .contatti > * {
@@ -238,7 +278,6 @@ footer > * {
 .navigation_footer li {
   color: var(--ciano);
   text-align: start;
-  margin-bottom: 1.5rem;
 }
 .fa-brands {
   color: var(--ciano);
@@ -257,7 +296,207 @@ footer > * {
   justify-content: center;
   gap: 1rem;
 }
-
+i {
+  color: white;
+}
 .copyright span {
   font-size: 1.4rem;
+}
+/*#endregion FOOTER*/
+/*#region MEDIA QUERIES*/
+
+/*#endregion MEDIA QUERIES*/
+
+@media screen and (min-width: 900px) {
+  .intestazione {
+    padding-inline: 2rem;
+
+    max-height: 5rem;
+  }
+  .logo_image {
+    max-width: 18rem;
+  }
+  .logo__button {
+    font-size: 1.4rem;
+    padding-inline: 6.5rem;
+    padding-block: 1.5rem;
+    border-radius: 25px;
+  }
+  h1 {
+    text-align: start;
+    font-size: 3.5rem;
+  }
+  header {
+    padding-inline: 5rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 0;
+    margin-inline: 2rem;
+    background-image: url(./images/bg-hero-desktop.svg);
+  }
+  .hero_call_to_action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: start;
+    gap: 2rem;
+    padding-block: 10rem;
+    flex: 1;
+  }
+  .hero_call_to_action_img {
+    flex: 1;
+    width: 100%;
+  }
+  .hero p {
+    text-align: initial;
+  }
+  .hero img {
+    max-width: none;
+    /* padding-block: 5rem; */
+  }
+  .hero__button {
+    padding: 2rem 6rem;
+    border-radius: 40px;
+    color: var(--ciano);
+    font-size: 1.4rem;
+  }
+  main {
+    padding-top: 15rem;
+    padding-inline: 0;
+  }
+  .card {
+    flex-direction: row;
+    align-items: center;
+    gap: 10rem;
+    padding: 2rem 2rem 2rem 8rem;
+    max-width: 120rem;
+    margin-inline: 10rem;
+  }
+  .card__content {
+    order: -1;
+    margin: 0;
+  }
+  .card__content h2 {
+    text-align: start;
+  }
+
+  .card_content_reverse {
+    order: 0;
+  }
+  .card__content p {
+    text-align: start;
+  }
+  .card__image {
+    max-width: 35rem;
+  }
+
+  .call_to_action {
+    padding: 3rem 5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: -110px;
+
+    max-width: 700px;
+  }
+  .call_to_action h3 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .contatti > * {
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    padding: 15rem 5rem 5rem 7rem;
+    display: flex;
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .footer_elements {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    font-size: clamp(14px, 0.67vi + 8px, 20px);
+  }
+
+  .social {
+    min-width: 200px;
+    gap: 1.5rem;
+  }
+  .navigation_footer ul {
+    display: grid;
+    grid-template-areas:
+      "about_us career"
+      "what_we_do blog"
+      "faq contact_us";
+    gap: 2.5rem;
+  }
+  i {
+    font-size: 22px;
+  }
+  .navigation_footer {
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .wrapper {
+    max-width: 85%;
+  }
+  .cerchio {
+    width: 4rem;
+    height: 4rem;
+  }
+  ul {
+    min-width: 250px;
+    justify-content: space-evenly;
+  }
+  ul li {
+    min-width: fit-content;
+  }
+
+  ul li:hover,
+  ul li:active {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  ul li:nth-child(1) {
+    grid-area: about_us;
+  }
+  ul li:nth-child(2) {
+    grid-area: what_we_do;
+  }
+  ul li:nth-child(3) {
+    grid-area: faq;
+  }
+  ul li:nth-child(4) {
+    grid-area: career;
+  }
+  ul li:nth-child(5) {
+    grid-area: blog;
+  }
+  ul li:nth-child(5) {
+    grid-area: contact_us;
+  }
+  .copyright {
+    text-align: right;
+  }
+
+  .cerchio:hover,
+  .cerchio:active {
+    cursor: pointer;
+    border: 2px solid var(--rosa);
+  }
+  .cerchio:hover i {
+    color: var(--rosa);
+  }
 }
